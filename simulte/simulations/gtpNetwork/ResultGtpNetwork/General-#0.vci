@@ -1,0 +1,179 @@
+file 6533 1636014337                                            
+version 2
+run General-0-20211024-21:49:32-18090
+attr configname General
+attr datetime 20211024-21:49:32
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network lte.simulations.networks.GtpNetwork
+attr processid 18090
+attr repetition 0
+attr replication #0
+attr resultdir ResultGtpNetwork
+attr runnumber 0
+attr seedset 0
+param **.Host1.numPingApps 2
+param **.Host1.pingApp[*].stopTime 9s
+param **.Host1.pingApp[0].destAddr "\"Host4\""
+param **.Host1.pingApp[0].startTime 1s
+param **.Host1.pingApp[1].destAddr "\"Host3\""
+param **.Host1.pingApp[1].startTime 1.5s
+param **.pgwStandard1.gtp_user.teidFileName "\"s1.xml\""
+param **.pgwStandard1.gtp_user.tftFileName "\"s1.xml\""
+param **.pgwStandard1.trafficFlowFilter.filterFileName "\"s1.xml\""
+param **.pgwStandard2.gtp_user.teidFileName "\"s2.xml\""
+param **.pgwStandard2.gtp_user.tftFileName "\"s2.xml\""
+param **.pgwStandard2.trafficFlowFilter.filterFileName "\"s2.xml\""
+param **.pgwStandard3.gtp_user.teidFileName "\"s3.xml\""
+param **.pgwStandard3.gtp_user.tftFileName "\"s3.xml\""
+param **.pgwStandard3.trafficFlowFilter.filterFileName "\"s3.xml\""
+
+vector 0 GtpNetwork.router3.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+0	6152 8 0 0 0 0 1 0 0 0 0
+vector 1 GtpNetwork.router3.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+1	6160 8 0 0 0 0 1 0 0 0 0
+vector 2 GtpNetwork.pgwStandard3.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+2	6168 8 0 0 0 0 1 0 0 0 0
+vector 3 GtpNetwork.pgwStandard3.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+3	6176 8 0 0 0 0 1 0 0 0 0
+vector 4 GtpNetwork.pgwStandard3.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+4	6184 8 0 0 0 0 1 0 0 0 0
+vector 5 GtpNetwork.pgwStandard3.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+5	6192 8 0 0 0 0 1 0 0 0 0
+vector 6 GtpNetwork.pgwStandard1.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+6	6200 8 0 0 0 0 1 0 0 0 0
+vector 7 GtpNetwork.pgwStandard1.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+7	6208 8 0 0 0 0 1 0 0 0 0
+vector 8 GtpNetwork.pgwStandard1.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+8	6216 8 0 0 0 0 1 0 0 0 0
+vector 9 GtpNetwork.pgwStandard1.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+9	6224 8 0 0 0 0 1 0 0 0 0
+vector 10 GtpNetwork.router1.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+10	6232 9 0 0 0 0 1 0 0 0 0
+vector 11 GtpNetwork.router1.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+11	6241 9 0 0 0 0 1 0 0 0 0
+vector 12 GtpNetwork.coreNetwork.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+12	6250 9 0 0 0 0 1 0 0 0 0
+vector 13 GtpNetwork.coreNetwork.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+13	6259 9 0 0 0 0 1 0 0 0 0
+vector 14 GtpNetwork.coreNetwork.ppp[1].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+14	6268 9 0 0 0 0 1 0 0 0 0
+vector 15 GtpNetwork.coreNetwork.ppp[1].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+15	6277 9 0 0 0 0 1 0 0 0 0
+vector 16 GtpNetwork.coreNetwork.ppp[2].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+16	6286 9 0 0 0 0 1 0 0 0 0
+vector 17 GtpNetwork.coreNetwork.ppp[2].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+17	6295 9 0 0 0 0 1 0 0 0 0
+vector 18 GtpNetwork.pgwStandard2.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+18	6304 9 0 0 0 0 1 0 0 0 0
+vector 19 GtpNetwork.pgwStandard2.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+19	6313 9 0 0 0 0 1 0 0 0 0
+vector 20 GtpNetwork.pgwStandard2.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+20	6322 9 0 0 0 0 1 0 0 0 0
+vector 21 GtpNetwork.pgwStandard2.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+21	6331 9 0 0 0 0 1 0 0 0 0
+vector 22 GtpNetwork.router2.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+22	6340 9 0 0 0 0 1 0 0 0 0
+vector 23 GtpNetwork.router2.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+23	6349 9 0 0 0 0 1 0 0 0 0
+vector 24 GtpNetwork.Host1.pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+24	6358 10 29 29 1 1 1 0 0 0 0
+vector 25 GtpNetwork.Host1.networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+25	6368 10 31 31 1 1 1 1 1 1 1
+vector 26 GtpNetwork.Host1.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+26	6378 11 33 33 1 1 1 28 28 28 784
+vector 27 GtpNetwork.Host1.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+27	6389 11 34 34 1 1 1 64 64 64 4096
+vector 28 GtpNetwork.Host1.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+28	6400 19 35 35 1.0000576 1.0000576 1 64 64 64 4096
+vector 29 GtpNetwork.router1.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+29	6419 19 36 36 1.0000577 1.0000577 1 64 64 64 4096
+vector 30 GtpNetwork.router1.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+30	6438 19 36 36 1.0000577 1.0000577 1 64 64 64 4096
+vector 31 GtpNetwork.router1.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+31	6457 19 37 37 1.0000577 1.0000577 1 28 28 28 784
+vector 32 GtpNetwork.router1.networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+32	6476 18 39 39 1.0000577 1.0000577 1 1 1 1 1
+vector 33 GtpNetwork.router1.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+33	6494 19 41 41 1.0000577 1.0000577 1 28 28 28 784
+vector 34 GtpNetwork.router1.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+34	6513 20 42 42 1.0000577 1.0000577 1 64 64 64 4096

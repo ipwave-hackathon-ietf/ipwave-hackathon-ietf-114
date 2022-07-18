@@ -1,0 +1,8 @@
+<launch>
+  <!-- <basedir path="UPDATE-WITH-YOUR-PATH"/> -->  
+  <basedir path="/home/iotlab/Documents/IPWAVE-Hackathon-114/simulte/simulations/Mode4/highway/006vpm"/>   
+  <copy file="highway.net.xml"/>
+  <copy file="highway.rou.xml"/>
+  <copy file="rerouters.add.xml"/>
+  <copy file="highway.sumo.cfg" type="config"/>
+</launch>

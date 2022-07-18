@@ -1,0 +1,505 @@
+version 2
+run Internet-LTE-0-20211025-20:21:23-18187
+attr configname Internet-LTE
+attr datetime 20211025-20:21:23
+attr experiment Internet-LTE
+attr inifile lteCoreExample.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network lte.simulations.networks.lteCoreNetwork
+attr processid 18187
+attr repetition 0
+attr replication #0
+attr resultdir ResultLteCoreNetwork
+attr runnumber 0
+attr seedset 0
+param **.InternetHost.numPingApps 3
+param **.InternetHost.pingApp[*].stopTime 8s
+param **.InternetHost.pingApp[0].destAddr "\"UE1\""
+param **.InternetHost.pingApp[0].startTime 1s
+param **.InternetHost.pingApp[1].destAddr "\"UE2\""
+param **.InternetHost.pingApp[1].startTime 1.2s
+param **.InternetHost.pingApp[2].destAddr "\"UE3\""
+param **.InternetHost.pingApp[2].startTime 1.4s
+param **.pgwStandard.trafficFlowFilter.filterFileName "\"lteCoreConfigFiles/pgw.xml\""
+param **.pgwStandard.gtp_user.teidFileName "\"lteCoreConfigFiles/pgw.xml\""
+param **.pgwStandard.gtp_user.tftFileName "\"lteCoreConfigFiles/pgw.xml\""
+param **.eNB1.trafficFlowFilter.filterFileName "\"lteCoreConfigFiles/enb1.xml\""
+param **.eNB1.gtp_user.teidFileName "\"lteCoreConfigFiles/enb1.xml\""
+param **.eNB1.gtp_user.tftFileName "\"lteCoreConfigFiles/enb1.xml\""
+param **.eNB2.trafficFlowFilter.filterFileName "\"lteCoreConfigFiles/enb2.xml\""
+param **.eNB2.gtp_user.teidFileName "\"lteCoreConfigFiles/enb2.xml\""
+param **.eNB2.gtp_user.tftFileName "\"lteCoreConfigFiles/enb2.xml\""
+param **.eNB3.trafficFlowFilter.filterFileName "\"lteCoreConfigFiles/enb3.xml\""
+param **.eNB3.gtp_user.teidFileName "\"lteCoreConfigFiles/enb3.xml\""
+param **.eNB3.gtp_user.tftFileName "\"lteCoreConfigFiles/enb3.xml\""
+param **.sgwStandard1.gtp_user.teidFileName "\"lteCoreConfigFiles/sgw1.xml\""
+param **.sgwStandard2.gtp_user.teidFileName "\"lteCoreConfigFiles/sgw2.xml\""
+
+vector 0 lteCoreNetwork.pgwStandard.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 lteCoreNetwork.pgwStandard.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 2 lteCoreNetwork.pgwStandard.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 lteCoreNetwork.pgwStandard.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 4 lteCoreNetwork.eNB3.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 lteCoreNetwork.eNB3.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 6 lteCoreNetwork.eNB3.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 7 lteCoreNetwork.eNB3.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 8 lteCoreNetwork.eNB1.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 9 lteCoreNetwork.eNB1.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 10 lteCoreNetwork.eNB1.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 11 lteCoreNetwork.eNB1.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 12 lteCoreNetwork.eNB2.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 13 lteCoreNetwork.eNB2.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 14 lteCoreNetwork.eNB2.pppInterface.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 15 lteCoreNetwork.eNB2.pppInterface.ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 16 lteCoreNetwork.sgwStandard2.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 17 lteCoreNetwork.sgwStandard2.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 18 lteCoreNetwork.sgwStandard2.ppp[1].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 19 lteCoreNetwork.sgwStandard2.ppp[1].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 20 lteCoreNetwork.sgwStandard1.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 21 lteCoreNetwork.sgwStandard1.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 22 lteCoreNetwork.sgwStandard1.ppp[1].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 23 lteCoreNetwork.sgwStandard1.ppp[1].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 24 lteCoreNetwork.router.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 25 lteCoreNetwork.router.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 26 lteCoreNetwork.router.ppp[1].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 27 lteCoreNetwork.router.ppp[1].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 28 lteCoreNetwork.router.ppp[2].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 29 lteCoreNetwork.router.ppp[2].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 30 lteCoreNetwork.router1.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 31 lteCoreNetwork.router1.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 32 lteCoreNetwork.router1.ppp[1].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 33 lteCoreNetwork.router1.ppp[1].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 34 lteCoreNetwork.router2.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 35 lteCoreNetwork.router2.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 36 lteCoreNetwork.router2.ppp[1].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 37 lteCoreNetwork.router2.ppp[1].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 38 lteCoreNetwork.router2.ppp[2].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 39 lteCoreNetwork.router2.ppp[2].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 40 lteCoreNetwork.router3.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 41 lteCoreNetwork.router3.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 42 lteCoreNetwork.UE1.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 43 lteCoreNetwork.UE1.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 44 lteCoreNetwork.UE2.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 45 lteCoreNetwork.UE2.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 46 lteCoreNetwork.UE3.ppp[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 47 lteCoreNetwork.UE3.ppp[0].ppp txState:vector ETV
+attr interpolationmode sample-hold
+attr title "tx state, vector"
+vector 48 lteCoreNetwork.InternetHost.pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 49 lteCoreNetwork.InternetHost.networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 50 lteCoreNetwork.InternetHost.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 51 lteCoreNetwork.InternetHost.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 52 lteCoreNetwork.InternetHost.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 53 lteCoreNetwork.router3.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 54 lteCoreNetwork.router3.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 55 lteCoreNetwork.router3.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 56 lteCoreNetwork.router3.networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 57 lteCoreNetwork.router3.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 58 lteCoreNetwork.router3.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 59 lteCoreNetwork.router3.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 60 lteCoreNetwork.InternetHost.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 61 lteCoreNetwork.InternetHost.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 62 lteCoreNetwork.InternetHost.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 63 lteCoreNetwork.router3.ppp[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 64 lteCoreNetwork.router3.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 65 lteCoreNetwork.router3.ppp[0].ppp rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 66 lteCoreNetwork.router3.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 67 lteCoreNetwork.pgwStandard.pppInterface.ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 68 lteCoreNetwork.pgwStandard.pppInterface.ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 69 lteCoreNetwork.pgwStandard.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 70 lteCoreNetwork.pgwStandard.ppp[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 71 lteCoreNetwork.pgwStandard.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 72 lteCoreNetwork.pgwStandard.ppp[0].ppp rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 73 lteCoreNetwork.pgwStandard.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 74 lteCoreNetwork.router.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 75 lteCoreNetwork.router.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 76 lteCoreNetwork.router.ppp[2].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 77 lteCoreNetwork.router.ppp[2].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 78 lteCoreNetwork.router.ppp[2].ppp rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 79 lteCoreNetwork.router.ppp[2].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 80 lteCoreNetwork.sgwStandard1.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 81 lteCoreNetwork.sgwStandard1.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 82 lteCoreNetwork.sgwStandard1.udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 83 lteCoreNetwork.sgwStandard1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 84 lteCoreNetwork.sgwStandard1.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 85 lteCoreNetwork.sgwStandard1.ppp[1].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 86 lteCoreNetwork.sgwStandard1.ppp[1].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 87 lteCoreNetwork.sgwStandard1.ppp[1].ppp rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 88 lteCoreNetwork.sgwStandard1.ppp[1].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 89 lteCoreNetwork.router1.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 90 lteCoreNetwork.router1.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 91 lteCoreNetwork.router1.ppp[1].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 92 lteCoreNetwork.router1.ppp[1].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 93 lteCoreNetwork.router1.ppp[1].ppp rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 94 lteCoreNetwork.router1.ppp[1].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+vector 95 lteCoreNetwork.eNB1.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 96 lteCoreNetwork.eNB1.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 97 lteCoreNetwork.eNB1.udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 98 lteCoreNetwork.eNB1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 99 lteCoreNetwork.eNB1.pppInterface.queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 100 lteCoreNetwork.eNB1.pppInterface.queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 101 lteCoreNetwork.eNB1.pppInterface.ppp rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 102 lteCoreNetwork.eNB1.pppInterface.ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, vector(packetBytes)"
+0	0	0	0
+1	0	0	0
+1	78	1.0002764	1
+1	79	1.0003716	0
+2	0	0	0
+3	0	0	0
+4	0	0	0
+5	0	0	0
+6	0	0	0
+7	0	0	0
+8	0	0	0
+9	0	0	0
+10	0	0	0
+11	0	0	0
+11	104	1.0006576	1
+12	0	0	0
+13	0	0	0
+14	0	0	0
+15	0	0	0
+16	0	0	0
+17	0	0	0
+18	0	0	0
+19	0	0	0
+20	0	0	0
+21	0	0	0
+22	0	0	0
+23	0	0	0
+23	92	1.000467	1
+23	93	1.0005622	0
+24	0	0	0
+25	0	0	0
+26	0	0	0
+27	0	0	0
+28	0	0	0
+29	0	0	0
+29	83	1.0003717	1
+29	84	1.0004669	0
+30	0	0	0
+31	0	0	0
+32	0	0	0
+33	0	0	0
+33	97	1.0005623	1
+33	98	1.0006575	0
+34	0	0	0
+35	0	0	0
+36	0	0	0
+37	0	0	0
+38	0	0	0
+39	0	0	0
+40	0	0	0
+41	0	0	0
+41	69	1.0002035	1
+41	71	1.0002763	0
+42	0	0	0
+43	0	0	0
+44	0	0	0
+45	0	0	0
+46	0	0	0
+47	0	0	0
+48	41	1	0
+49	43	1	1
+50	45	1	28
+50	61	1.0001154	84
+51	46	1	64
+51	62	1.0001154	102
+52	47	1.0000576	64
+52	64	1.0002034	102
+53	48	1.0000577	64
+53	65	1.0002035	102
+54	48	1.0000577	64
+54	65	1.0002035	102
+55	49	1.0000577	28
+55	66	1.0002035	84
+56	51	1.0000577	1
+57	53	1.0000577	28
+58	54	1.0000577	64
+59	56	1.0001153	64
+60	57	1.0001154	64
+61	57	1.0001154	64
+62	58	1.0001154	28
+63	68	1.0002035	84
+64	68	1.0002035	0
+65	69	1.0002035	84
+66	69	1.0002035	91
+67	72	1.0002764	91
+68	72	1.0002764	84
+69	75	1.0002764	92
+70	77	1.0002764	112
+71	77	1.0002764	0
+72	78	1.0002764	112
+73	78	1.0002764	119
+74	80	1.0003717	119
+75	80	1.0003717	112
+76	82	1.0003717	112
+77	82	1.0003717	0
+78	83	1.0003717	112
+79	83	1.0003717	119
+80	85	1.000467	119
+81	85	1.000467	112
+82	87	1.000467	92
+83	87	1.000467	1
+84	89	1.000467	92
+85	91	1.000467	112
+86	91	1.000467	0
+87	92	1.000467	112
+88	92	1.000467	119
+89	94	1.0005623	119
+90	94	1.0005623	112
+91	96	1.0005623	112
+92	96	1.0005623	0
+93	97	1.0005623	112
+94	97	1.0005623	119
+95	99	1.0006576	119
+96	99	1.0006576	112
+97	101	1.0006576	92
+98	101	1.0006576	1
+99	103	1.0006576	84
+100	103	1.0006576	0
+101	104	1.0006576	84
+102	104	1.0006576	91
+
