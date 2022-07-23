@@ -1,0 +1,856 @@
+version 2
+run Hackathon114-0-20220721-17:36:47-3130
+attr configname Hackathon114
+attr datetime 20220721-17:36:47
+attr experiment Hackathon114
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network lte.simulations.Mode4.Highway
+attr processid 3130
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.car[*].d2dCapable true
+param *.car[*].mode4D2D true
+param **.amcMode "\"D2D\""
+param *.car[*].applType "\"Mode4App\""
+param *.car[*].appl.packetSize 190
+param *.car[*].nicType "\"LteNicVUeMode4\""
+param *.car[*].lteNic.d2dCapable true
+param *.car[*].lteNic.pdcpRrc.ipBased false
+param *.car[*].lteNic.rlc.ipBased false
+param *.car[*].lteNic.mac.subchannelSize 16
+param *.car[*].lteNic.mac.numSubchannels 3
+param *.car[*].lteNic.mac.probResourceKeep 0.4
+param *.car[*].lteNic.mac.useCBR false
+param *.car[*].lteNic.mac.crLimit false
+param *.car[*].lteNic.mac.rriLookup false
+param *.car[*].lteNic.mac.dccMechanism false
+param *.car[*].lteNic.mac.packetDropping false
+param *.car[*].lteNic.mac.reselectAfter 1
+param *.car[*].lteNic.mac.adjacencyPSCCHPSSCH true
+param *.car[*].lteNic.rlc.um.scenario3gpp false
+param *.car[*].lteNic.phy.subchannelSize 16
+param *.car[*].lteNic.phy.numSubchannels 3
+param *.car[*].lteNic.phy.selectionWindowStartingSubframe 1
+param *.car[*].lteNic.phy.adjacencyPSCCHPSSCH true
+param *.car[*].lteNic.phy.pStep 100
+param *.car[*].lteNic.phy.thresholdRSSI 10
+param *.car[*].ueTxPower 23
+param *.car[*].lteNic.phy.d2dTxPower 23
+param *.**.nic.lteNic.phy.usePropagationDelay true
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.physicalLinkVisualizer.packetFilter "\"Mode4Data*\""
+param **.usePreconfiguredTxParams true
+param **.lteNic.mac.txConfig "xmldoc(\"sidelink_configuration.xml\")"
+param **.coreDebug false
+param **.routingRecorder.enabled false
+param *.playgroundSizeX 2000000m
+param *.playgroundSizeY 2000000m
+param *.playgroundSizeZ 50m
+param **.channelControl.pMax 10W
+param **.channelControl.alpha 1.0
+param **.channelControl.carrierFrequency 6000e+6Hz
+param **.lteNic.phy.channelModel "xmldoc(\"config_channel.xml\")"
+param **.feedbackComputation "xmldoc(\"config_channel.xml\")"
+param **.rbAllocationType "\"localized\""
+param **.feedbackType "\"ALLBANDS\""
+param **.feedbackGeneratorType "\"IDEAL\""
+param **.maxHarqRtx 0
+param **.deployer.ruRange 50
+param **.deployer.ruTxPower "\"50,50,50;\""
+param **.deployer.antennaCws "\"2;\""
+param **.deployer.numRbDl 51
+param **.deployer.numRbUl 48
+param **.numBands 48
+param **.fbDelay 1
+param *.veinsManager.moduleType "\"lte.corenetwork.nodes.cars.CarIPv6\""
+param *.veinsManager.moduleName "\"car\""
+param *.veinsManager.moduleDisplayString "\"\""
+param *.veinsManager.launchConfig "xmldoc(\"highway/006vpm/highway.launchd.xml\")"
+param *.veinsManager.updateInterval 0.1s
+param *.veinsManager.firstStepAt 500s
+param *.car[*].mobilityType "\"VeinsInetMobility\""
+param **.deployer.positionUpdateInterval 0.01s
+
+vector 0 Highway.car[0].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 1 Highway.car[0].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 2 Highway.car[1].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 3 Highway.car[1].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 4 Highway.car[2].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 5 Highway.car[2].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 6 Highway.car[3].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 7 Highway.car[3].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 8 Highway.car[4].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 9 Highway.car[4].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 10 Highway.car[5].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 11 Highway.car[5].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 12 Highway.car[6].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 13 Highway.car[6].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 14 Highway.car[7].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 15 Highway.car[7].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 16 Highway.car[8].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 17 Highway.car[8].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 18 Highway.car[9].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 19 Highway.car[9].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 20 Highway.car[10].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 21 Highway.car[10].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 22 Highway.car[11].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 23 Highway.car[11].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 24 Highway.car[12].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 25 Highway.car[12].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 26 Highway.car[13].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 27 Highway.car[13].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 28 Highway.car[14].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 29 Highway.car[14].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 30 Highway.car[15].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 31 Highway.car[15].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 32 Highway.car[16].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 33 Highway.car[16].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 34 Highway.car[17].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 35 Highway.car[17].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 36 Highway.car[18].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 37 Highway.car[18].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 38 Highway.car[19].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 39 Highway.car[19].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 40 Highway.car[20].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 41 Highway.car[20].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 42 Highway.car[21].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 43 Highway.car[21].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 44 Highway.car[22].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 45 Highway.car[22].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 46 Highway.car[23].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 47 Highway.car[23].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 48 Highway.car[24].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 49 Highway.car[24].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 50 Highway.car[25].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 51 Highway.car[25].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 52 Highway.car[26].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 53 Highway.car[26].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 54 Highway.car[27].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 55 Highway.car[27].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 56 Highway.car[28].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 57 Highway.car[28].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 58 Highway.car[29].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 59 Highway.car[29].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+0	2	500	0
+1	2	500	1025
+2	2	500	0
+3	2	500	1026
+4	2	500	0
+5	2	500	1027
+6	2	500	0
+7	2	500	1028
+8	2	500	0
+9	2	500	1029
+10	2	500	0
+11	2	500	1030
+12	2	500	0
+13	2	500	1031
+14	2	500	0
+15	2	500	1032
+16	2	500	0
+17	2	500	1033
+18	2	500	0
+19	2	500	1034
+20	2	500	0
+21	2	500	1035
+22	2	500	0
+23	2	500	1036
+24	2	500	0
+25	2	500	1037
+26	2	500	0
+27	2	500	1038
+28	2	500	0
+29	2	500	1039
+30	2	500	0
+31	2	500	1040
+32	2	500	0
+33	2	500	1041
+34	2	500	0
+35	2	500	1042
+36	2	500	0
+37	2	500	1043
+38	2	500	0
+39	2	500	1044
+40	2	500	0
+41	2	500	1045
+42	2	500	0
+43	2	500	1046
+44	2	500	0
+45	2	500	1047
+46	2	500	0
+47	2	500	1048
+48	2	500	0
+49	2	500	1049
+50	2	500	0
+51	2	500	1050
+52	2	500	0
+53	2	500	1051
+54	2	500	0
+55	2	500	1052
+56	2	500	0
+57	2	500	1053
+58	2	500	0
+59	2	500	1054
+vector 60 Highway.car[0].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 61 Highway.car[0].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 62 Highway.car[1].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 63 Highway.car[1].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 64 Highway.car[2].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 65 Highway.car[2].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 66 Highway.car[3].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 67 Highway.car[3].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 68 Highway.car[4].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 69 Highway.car[4].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 70 Highway.car[5].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 71 Highway.car[5].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 72 Highway.car[6].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 73 Highway.car[6].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 74 Highway.car[7].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 75 Highway.car[7].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 76 Highway.car[8].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 77 Highway.car[8].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 78 Highway.car[9].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 79 Highway.car[9].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 80 Highway.car[10].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 81 Highway.car[10].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 82 Highway.car[11].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 83 Highway.car[11].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 84 Highway.car[12].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 85 Highway.car[12].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 86 Highway.car[13].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 87 Highway.car[13].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 88 Highway.car[13].lteNic.phy cbr:vector ETV
+attr source cbr
+attr title "Channel Busy Ratio, vector"
+vector 89 Highway.car[13].lteNic.phy cbrPscch:vector ETV
+attr source cbrPscch
+attr title "Channel Busy Ratio for PSCCH, vector"
+vector 90 Highway.car[14].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 91 Highway.car[14].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 92 Highway.car[15].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 93 Highway.car[15].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 94 Highway.car[16].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 95 Highway.car[16].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 96 Highway.car[17].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 97 Highway.car[17].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 98 Highway.car[18].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 99 Highway.car[18].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 100 Highway.car[19].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 101 Highway.car[19].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 102 Highway.car[20].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 103 Highway.car[20].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 104 Highway.car[21].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 105 Highway.car[21].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 106 Highway.car[22].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 107 Highway.car[22].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 108 Highway.car[23].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 109 Highway.car[23].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 110 Highway.car[24].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 111 Highway.car[24].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 112 Highway.car[25].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 113 Highway.car[25].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 114 Highway.car[26].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 115 Highway.car[26].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 116 Highway.car[27].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 117 Highway.car[27].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 118 Highway.car[28].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 119 Highway.car[28].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 120 Highway.car[29].lteNic.phy posX:vector ETV
+attr source posX
+attr title "X position of node (at reception time), vector"
+vector 121 Highway.car[29].lteNic.phy posY:vector ETV
+attr source posY
+attr title "Y position of node (at reception time), vector"
+vector 122 Highway.car[13].lteNic.mac receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr source receivedPacketFromLowerLayer
+vector 123 Highway.car[13].lteNic.mac sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPacketToUpperLayer
+vector 124 Highway.car[13].lteNic.pdcpRrc sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPacketToUpperLayer
+vector 125 Highway.car[13].appl cbr:vector ETV
+attr source cbr
+attr title "Channel Busy Ratio, vector"
+attr unit ""
+60	33	500.001	1648.5827173847
+60	98	500.002	1648.5827173847
+60	158	500.003	1648.5827173847
+60	218	500.004	1648.5827173847
+60	278	500.005	1648.5827173847
+61	33	500.001	73
+61	98	500.002	73
+61	158	500.003	73
+61	218	500.004	73
+61	278	500.005	73
+62	34	500.001	858.03092034351
+62	99	500.002	858.03092034351
+62	159	500.003	858.03092034351
+62	219	500.004	858.03092034351
+62	279	500.005	858.03092034351
+63	34	500.001	69
+63	99	500.002	69
+63	159	500.003	69
+63	219	500.004	69
+63	279	500.005	69
+64	35	500.001	1571.3193181251
+64	100	500.002	1571.3193181251
+64	160	500.003	1571.3193181251
+64	220	500.004	1571.3193181251
+64	280	500.005	1571.3193181251
+65	35	500.001	69
+65	100	500.002	69
+65	160	500.003	69
+65	220	500.004	69
+65	280	500.005	69
+66	36	500.001	857.33708933425
+66	101	500.002	857.33708933425
+66	161	500.003	857.33708933425
+66	221	500.004	857.33708933425
+66	281	500.005	857.33708933425
+67	36	500.001	85
+67	101	500.002	85
+67	161	500.003	85
+67	221	500.004	85
+67	281	500.005	85
+68	37	500.001	1179.1921529767
+68	102	500.002	1179.1921529767
+68	162	500.003	1179.1921529767
+68	222	500.004	1179.1921529767
+68	282	500.005	1179.1921529767
+69	37	500.001	81
+69	102	500.002	81
+69	162	500.003	81
+69	222	500.004	81
+69	282	500.005	81
+70	38	500.001	725.33812106173
+70	103	500.002	725.33812106173
+70	163	500.003	725.33812106173
+70	223	500.004	725.33812106173
+70	283	500.005	725.33812106173
+71	38	500.001	77
+71	103	500.002	77
+71	163	500.003	77
+71	223	500.004	77
+71	283	500.005	77
+72	39	500.001	1889.3915485133
+72	104	500.002	1889.3915485133
+72	164	500.003	1889.3915485133
+72	224	500.004	1889.3915485133
+72	284	500.005	1889.3915485133
+73	39	500.001	65
+73	104	500.002	65
+73	164	500.003	65
+73	224	500.004	65
+73	284	500.005	65
+74	40	500.001	622.81764393048
+74	105	500.002	622.81764393048
+74	165	500.003	622.81764393048
+74	225	500.004	622.81764393048
+74	285	500.005	622.81764393048
+75	40	500.001	77
+75	105	500.002	77
+75	165	500.003	77
+75	225	500.004	77
+75	285	500.005	77
+76	41	500.001	1993.8148897506
+76	106	500.002	1993.8148897506
+76	166	500.003	1993.8148897506
+76	226	500.004	1993.8148897506
+76	286	500.005	1993.8148897506
+77	41	500.001	65
+77	106	500.002	65
+77	166	500.003	65
+77	226	500.004	65
+77	286	500.005	65
+78	42	500.001	1230.2542925985
+78	107	500.002	1230.2542925985
+78	167	500.003	1230.2542925985
+78	227	500.004	1230.2542925985
+78	287	500.005	1230.2542925985
+79	42	500.001	85
+79	107	500.002	85
+79	167	500.003	85
+79	227	500.004	85
+79	287	500.005	85
+80	43	500.001	1992.6967882282
+80	108	500.002	1992.6967882282
+80	168	500.003	1992.6967882282
+80	228	500.004	1992.6967882282
+80	288	500.005	1992.6967882282
+81	43	500.001	81
+81	108	500.002	81
+81	168	500.003	81
+81	228	500.004	81
+81	288	500.005	81
+82	44	500.001	678.69876587853
+82	109	500.002	678.69876587853
+82	169	500.003	678.69876587853
+82	229	500.004	678.69876587853
+82	289	500.005	678.69876587853
+83	44	500.001	85
+83	109	500.002	85
+83	169	500.003	85
+83	229	500.004	85
+83	289	500.005	85
+84	45	500.001	1264.0681827582
+84	110	500.002	1264.0681827582
+84	170	500.003	1264.0681827582
+84	230	500.004	1264.0681827582
+84	290	500.005	1264.0681827582
+85	45	500.001	65
+85	110	500.002	65
+85	170	500.003	65
+85	230	500.004	65
+85	290	500.005	65
+86	46	500.001	1900.1301903268
+86	111	500.002	1900.1301903268
+86	171	500.003	1900.1301903268
+86	231	500.004	1900.1301903268
+86	291	500.005	1900.1301903268
+87	46	500.001	81
+87	111	500.002	81
+87	171	500.003	81
+87	231	500.004	81
+87	291	500.005	81
+88	46	500.001	0
+89	46	500.001	0
+90	47	500.001	841.87698942519
+90	112	500.002	841.87698942519
+90	172	500.003	841.87698942519
+90	232	500.004	841.87698942519
+90	292	500.005	841.87698942519
+91	47	500.001	65
+91	112	500.002	65
+91	172	500.003	65
+91	232	500.004	65
+91	292	500.005	65
+92	48	500.001	1756.6715716193
+92	113	500.002	1756.6715716193
+92	173	500.003	1756.6715716193
+92	233	500.004	1756.6715716193
+92	293	500.005	1756.6715716193
+93	48	500.001	81
+93	113	500.002	81
+93	173	500.003	81
+93	233	500.004	81
+93	293	500.005	81
+94	49	500.001	1282.7456678744
+94	114	500.002	1282.7456678744
+94	174	500.003	1282.7456678744
+94	234	500.004	1282.7456678744
+94	294	500.005	1282.7456678744
+95	49	500.001	81
+95	114	500.002	81
+95	174	500.003	81
+95	234	500.004	81
+95	294	500.005	81
+96	50	500.001	570.28645773947
+96	115	500.002	570.28645773947
+96	175	500.003	570.28645773947
+96	235	500.004	570.28645773947
+96	295	500.005	570.28645773947
+97	50	500.001	85
+97	115	500.002	85
+97	175	500.003	85
+97	235	500.004	85
+97	295	500.005	85
+98	51	500.001	1002.3689404153
+98	116	500.002	1002.3689404153
+98	176	500.003	1002.3689404153
+98	236	500.004	1002.3689404153
+98	296	500.005	1002.3689404153
+99	51	500.001	81
+99	116	500.002	81
+99	176	500.003	81
+99	236	500.004	81
+99	296	500.005	81
+100	52	500.001	872.18018029375
+100	117	500.002	872.18018029375
+100	177	500.003	872.18018029375
+100	237	500.004	872.18018029375
+100	297	500.005	872.18018029375
+101	52	500.001	81
+101	117	500.002	81
+101	177	500.003	81
+101	237	500.004	81
+101	297	500.005	81
+102	53	500.001	1117.7609147336
+102	118	500.002	1117.7609147336
+102	178	500.003	1117.7609147336
+102	238	500.004	1117.7609147336
+102	298	500.005	1117.7609147336
+103	53	500.001	77
+103	118	500.002	77
+103	178	500.003	77
+103	238	500.004	77
+103	298	500.005	77
+104	54	500.001	1280.1512156848
+104	119	500.002	1280.1512156848
+104	179	500.003	1280.1512156848
+104	239	500.004	1280.1512156848
+104	299	500.005	1280.1512156848
+105	54	500.001	77
+105	119	500.002	77
+105	179	500.003	77
+105	239	500.004	77
+105	299	500.005	77
+106	55	500.001	909.11969999409
+106	120	500.002	909.11969999409
+106	180	500.003	909.11969999409
+106	240	500.004	909.11969999409
+106	300	500.005	909.11969999409
+107	55	500.001	77
+107	120	500.002	77
+107	180	500.003	77
+107	240	500.004	77
+107	300	500.005	77
+108	56	500.001	1034.0096075248
+108	121	500.002	1034.0096075248
+108	181	500.003	1034.0096075248
+108	241	500.004	1034.0096075248
+108	301	500.005	1034.0096075248
+109	56	500.001	65
+109	121	500.002	65
+109	181	500.003	65
+109	241	500.004	65
+109	301	500.005	65
+110	57	500.001	946.34561029703
+110	122	500.002	946.34561029703
+110	182	500.003	946.34561029703
+110	242	500.004	946.34561029703
+110	302	500.005	946.34561029703
+111	57	500.001	85
+111	122	500.002	85
+111	182	500.003	85
+111	242	500.004	85
+111	302	500.005	85
+112	58	500.001	1660.8286367275
+112	123	500.002	1660.8286367275
+112	183	500.003	1660.8286367275
+112	243	500.004	1660.8286367275
+112	303	500.005	1660.8286367275
+113	58	500.001	69
+113	123	500.002	69
+113	183	500.003	69
+113	243	500.004	69
+113	303	500.005	69
+114	59	500.001	1960.1827637689
+114	124	500.002	1960.1827637689
+114	184	500.003	1960.1827637689
+114	244	500.004	1960.1827637689
+114	304	500.005	1960.1827637689
+115	59	500.001	85
+115	124	500.002	85
+115	184	500.003	85
+115	244	500.004	85
+115	304	500.005	85
+116	60	500.001	1726.5581555649
+116	125	500.002	1726.5581555649
+116	185	500.003	1726.5581555649
+116	245	500.004	1726.5581555649
+116	305	500.005	1726.5581555649
+117	60	500.001	65
+117	125	500.002	65
+117	185	500.003	65
+117	245	500.004	65
+117	305	500.005	65
+118	61	500.001	1430.2203596499
+118	126	500.002	1430.2203596499
+118	186	500.003	1430.2203596499
+118	246	500.004	1430.2203596499
+118	306	500.005	1430.2203596499
+119	61	500.001	65
+119	126	500.002	65
+119	186	500.003	65
+119	246	500.004	65
+119	306	500.005	65
+120	62	500.001	687.88532407619
+120	127	500.002	687.88532407619
+120	187	500.003	687.88532407619
+120	247	500.004	687.88532407619
+120	307	500.005	687.88532407619
+121	62	500.001	81
+121	127	500.002	81
+121	187	500.003	81
+121	247	500.004	81
+121	307	500.005	81
+122	63	500.001	0
+123	63	500.001	0
+124	66	500.001	0
+125	67	500.001	0
+

@@ -60,6 +60,11 @@ module CarIPv6 extends StandardHost6
             d2dCapable = d2dCapable;
             @display("p=250,407");
         }
+        
+//        //BA
+//        configurator: FlatNetworkConfigurator6 {
+//            @display("is=s;p=709.784,342.152");
+//        }
     connections allowunconnected:
         //# 
         //# Internal TCP/UDP applications connections with IP stack

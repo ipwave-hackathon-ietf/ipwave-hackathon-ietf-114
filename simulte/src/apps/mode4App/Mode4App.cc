@@ -69,6 +69,7 @@ void Mode4App::initialize(int stage)
 //        std::cout <<" Delay = " <<delay <<std::endl;
         scheduleAt((simTime() + delay).trunc(SIMTIME_MS), selfSender_);
         if (std::strcmp(getParentModule()->getFullName(), "car[2]") == 0){
+            scheduleAt(simTime()+0.5, CCMmsgTrigger);
             scheduleAt(simTime()+2, ECMmsgTrigger);
         }
     }

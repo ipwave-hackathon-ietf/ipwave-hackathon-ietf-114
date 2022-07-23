@@ -49,6 +49,7 @@ protected:
 
     cMessage *selfSender_;
     cMessage* ECMmsgTrigger;
+    cMessage* CCMmsgTrigger;
 
     LteBinder* binder_;
     MacNodeId nodeId_;
