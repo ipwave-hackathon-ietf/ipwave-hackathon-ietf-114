@@ -54,7 +54,7 @@ void Mode4App::initialize(int stage)
         selfSender_ = NULL;
         nextSno_ = 0;
 
-        selfSender_ = new cMessage("selfSender");
+        selfSender_ = new cMessage("CCMMsg");
         ECMmsgTrigger = new cMessage ("ECMMsg");
         period_ = par("period");
         priority_ = par("priority");
@@ -69,8 +69,7 @@ void Mode4App::initialize(int stage)
 //        std::cout <<" Delay = " <<delay <<std::endl;
         scheduleAt((simTime() + delay).trunc(SIMTIME_MS), selfSender_);
         if (std::strcmp(getParentModule()->getFullName(), "car[2]") == 0){
-            scheduleAt(simTime()+0.5, CCMmsgTrigger);
-            scheduleAt(simTime()+2, ECMmsgTrigger);
+            scheduleAt(simTime()+0.5, ECMmsgTrigger);
         }
     }
 }
@@ -83,8 +82,8 @@ void Mode4App::handleLowerMessage(cMessage* msg)
         emit(cbr_, channel_load);
         delete cbrPkt;
     }
-    else if(msg->isName("ECM")){
-//       std::cout << "ECM receivable <<------>> " <<std::endl;;
+    else if(msg->isName("ECMMsg")){
+    std::cout << "ECM receivable <<------>> " <<std::endl;;
         if (selfSender_->isScheduled()){
             cancelEvent(selfSender_);
         }
@@ -113,7 +112,7 @@ void Mode4App::handleSelfMessage(cMessage* msg)
 {
     bool flagOriginal = false;
     if (flagOriginal){
-        if (!strcmp(msg->getName(), "selfSender")){
+        if (!strcmp(msg->getName(), "CCMMsg")){
             // Replace method
             AlertPacket* packet = new AlertPacket("Alert");
             packet->setTimestamp(simTime());
@@ -135,7 +134,7 @@ void Mode4App::handleSelfMessage(cMessage* msg)
             Mode4BaseApp::sendLowerPackets(packet);
             emit(sentMsg_, (long)1);
 
-            scheduleAt(simTime() + period_, selfSender_);
+            scheduleAt(simTime() + 0.5, selfSender_);
         }
         else
             throw cRuntimeError("Mode4App::handleMessage - Unrecognized self message");
@@ -165,12 +164,13 @@ void Mode4App::handleSelfMessage(cMessage* msg)
             if (selfSender_->isScheduled()){
                 cancelEvent(selfSender_);
             }
-            scheduleAt(simTime() + period_, ECMmsgTrigger);
+            scheduleAt(simTime() + 0.5, ECMmsgTrigger);
+//            scheduleAt(simTime() + period_, ECMmsgTrigger);
         }
-        else if (!strcmp(msg->getName(), "selfSender")){
+        else if (!strcmp(msg->getName(), "CCMMsg")){
                // Replace method
                std::cout <<"CCM from " << getParentModule()->getFullName() <<std::endl;
-               AlertPacket* packet = new AlertPacket("CCM");
+               AlertPacket* packet = new AlertPacket("CCMMsg");
                packet->setTimestamp(simTime());
                packet->setByteLength(size_);
                packet->setSno(nextSno_);
@@ -190,7 +190,8 @@ void Mode4App::handleSelfMessage(cMessage* msg)
                Mode4BaseApp::sendLowerPackets(packet);
                emit(sentMsg_, (long)1);
 
-               scheduleAt(simTime() + period_, selfSender_);
+//               scheduleAt(simTime() + period_, selfSender_);
+               scheduleAt(simTime() + 0.5, selfSender_);
            }
            else
                throw cRuntimeError("Mode4App::handleMessage - Unrecognized self message");

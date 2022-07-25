@@ -1,0 +1,108 @@
+version 2
+run Hackathon114-0-20220724-23:18:59-6126
+attr configname Hackathon114
+attr datetime 20220724-23:18:59
+attr experiment Hackathon114
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network lte.simulations.Mode4.Highway
+attr processid 6126
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.car[*].d2dCapable true
+param *.car[*].mode4D2D true
+param **.amcMode "\"D2D\""
+param *.car[*].applType "\"Mode4App\""
+param *.car[*].appl.packetSize 190
+param *.car[*].nicType "\"LteNicVUeMode4\""
+param *.car[*].lteNic.d2dCapable true
+param *.car[*].lteNic.pdcpRrc.ipBased false
+param *.car[*].lteNic.rlc.ipBased false
+param *.car[*].lteNic.mac.subchannelSize 16
+param *.car[*].lteNic.mac.numSubchannels 3
+param *.car[*].lteNic.mac.probResourceKeep 0.4
+param *.car[*].lteNic.mac.useCBR false
+param *.car[*].lteNic.mac.crLimit false
+param *.car[*].lteNic.mac.rriLookup false
+param *.car[*].lteNic.mac.dccMechanism false
+param *.car[*].lteNic.mac.packetDropping false
+param *.car[*].lteNic.mac.reselectAfter 1
+param *.car[*].lteNic.mac.adjacencyPSCCHPSSCH true
+param *.car[*].lteNic.rlc.um.scenario3gpp false
+param *.car[*].lteNic.phy.subchannelSize 16
+param *.car[*].lteNic.phy.numSubchannels 3
+param *.car[*].lteNic.phy.selectionWindowStartingSubframe 1
+param *.car[*].lteNic.phy.adjacencyPSCCHPSSCH true
+param *.car[*].lteNic.phy.pStep 100
+param *.car[*].lteNic.phy.thresholdRSSI 10
+param *.car[*].ueTxPower 23
+param *.car[*].lteNic.phy.d2dTxPower 23
+param *.**.nic.lteNic.phy.usePropagationDelay true
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.physicalLinkVisualizer.packetFilter "\"Mode4Data*\""
+param **.usePreconfiguredTxParams true
+param **.lteNic.mac.txConfig "xmldoc(\"sidelink_configuration.xml\")"
+param **.coreDebug false
+param **.routingRecorder.enabled false
+param *.playgroundSizeX 2000000m
+param *.playgroundSizeY 2000000m
+param *.playgroundSizeZ 50m
+param **.channelControl.pMax 10W
+param **.channelControl.alpha 1.0
+param **.channelControl.carrierFrequency 6000e+6Hz
+param **.lteNic.phy.channelModel "xmldoc(\"config_channel.xml\")"
+param **.feedbackComputation "xmldoc(\"config_channel.xml\")"
+param **.rbAllocationType "\"localized\""
+param **.feedbackType "\"ALLBANDS\""
+param **.feedbackGeneratorType "\"IDEAL\""
+param **.maxHarqRtx 0
+param **.deployer.ruRange 50
+param **.deployer.ruTxPower "\"50,50,50;\""
+param **.deployer.antennaCws "\"2;\""
+param **.deployer.numRbDl 51
+param **.deployer.numRbUl 48
+param **.numBands 48
+param **.fbDelay 1
+param *.veinsManager.moduleType "\"lte.corenetwork.nodes.cars.CarIPv6\""
+param *.veinsManager.moduleName "\"car\""
+param *.veinsManager.moduleDisplayString "\"\""
+param *.veinsManager.launchConfig "xmldoc(\"highway/006vpm/highway.launchd.xml\")"
+param *.veinsManager.updateInterval 0.1s
+param *.veinsManager.firstStepAt 500s
+param *.car[*].mobilityType "\"VeinsInetMobility\""
+param **.deployer.positionUpdateInterval 0.01s
+
+vector 0 Highway.car[0].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 1 Highway.car[0].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 2 Highway.car[1].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 3 Highway.car[1].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+vector 4 Highway.car[2].lteNic.phy servingCell:vector ETV
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE, vector"
+attr unit ""
+vector 5 Highway.car[2].lteNic.mac macNodeID:vector ETV
+attr source macNodeID
+attr title "Reports Mac NodeID to allow for trans to nodeID, vector"
+0	2	500	0
+1	2	500	1025
+2	2	500	0
+3	2	500	1026
+4	2	500	0
+5	2	500	1027
+
